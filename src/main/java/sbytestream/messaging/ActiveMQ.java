@@ -1,6 +1,6 @@
 // Author       : Siddharth Barman
 // Date         : 28 March 2020
-// Description  : This wrapper over ActiveMQ classes.
+// Description  : Thin wrapper over ActiveMQ classes.
 
 package sbytestream.messaging;
 
