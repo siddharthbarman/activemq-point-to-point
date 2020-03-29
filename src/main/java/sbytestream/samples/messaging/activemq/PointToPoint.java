@@ -5,7 +5,6 @@
 //                You should have a running ActiveMQ server.
 
 package sbytestream.samples.messaging.activemq;
-
 import sbytestream.messaging.ActiveMQ;
 import sbytestream.utilities.CmdLine;
 import javax.jms.Message;
@@ -37,12 +36,12 @@ public class PointToPoint {
         }
 
         if (!cmd.isFlagPresent("host")) {
-            System.out.println("sbytestream.messaging.ActiveMQ host has not been specified. Quitting.");
+            System.out.println("ActiveMQ host has not been specified. Quitting.");
             return;
         }
 
         if (!cmd.isFlagPresent("port")) {
-            System.out.println("sbytestream.messaging.ActiveMQ port has not been specified. Quitting.");
+            System.out.println("ActiveMQ port has not been specified. Quitting.");
             return;
         }
 
@@ -100,7 +99,7 @@ public class PointToPoint {
         MessageConsumer consumer = activeMQ.createConsumer(new ConsumerMessageListener());
 
         System.out.println("Press <Enter> to exit.");
-        String line = System.console().readLine();
+        System.console().readLine();
 
         consumer.close();
         activeMQ.close();
